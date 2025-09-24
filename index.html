@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع LINK للخدمات التقنية</title>
+    <!-- تضمين مكتبة Tailwind CSS للتصميم -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* إضافة خط مخصص */
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+        body {
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* تحديد الألوان الرئيسية من اللوجو */
+        :root {
+            --light-blue: #00C6FF;
+            --dark-blue: #1E40AF;
+        }
+        
+        .bg-primary-gradient {
+            background-image: linear-gradient(to right, var(--light-blue), var(--dark-blue));
+        }
+
+        .text-light-blue {
+            color: var(--light-blue);
+        }
+        
+        .text-dark-blue {
+            color: var(--dark-blue);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- شريط التنقل (Navbar) -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- الشعار -->
+            <a href="#" class="flex items-center hover:opacity-80 transition-opacity">
+                <!-- قم بتغيير 'اسم-المستخدم' و 'اسم-المستودع' ورابط الصورة بعد رفعها على GitHub -->
+                <img src="https://raw.githubusercontent.com/اسم-المستخدم/اسم-المستودع/main/logo.png" alt="شعار LINK" class="h-10 w-auto rounded-lg">
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-600 hover:text-light-blue">من نحن</a>
+                <a href="#services" class="text-gray-600 hover:text-light-blue">خدماتنا</a>
+                <a href="#contact" class="text-gray-600 hover:text-light-blue">تواصل معنا</a>
+            </div>
+            <!-- زر قائمة الجوال -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- قائمة الجوال -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#about" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">من نحن</a>
+            <a href="#services" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">خدماتنا</a>
+            <a href="#contact" class="block py-2 px-6 text-gray-600 hover:bg-gray-100">تواصل معنا</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- قسم المقدمة (Hero Section) -->
+        <section id="hero" class="bg-primary-gradient text-white py-20 md:py-32 text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">حلول تكنولوجية مبتكرة من LINK</h1>
+                <p class="text-lg md:text-xl mb-8">نحن نقدم أفضل الحلول البرمجية التي تساهم في نمو أعمالك وتحقيق أهدافك.</p>
+                <a href="#contact" class="bg-white text-dark-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
+                    ابدأ الآن
+                </a>
+            </div>
+        </section>
+
+        <!-- قسم من نحن -->
+        <section id="about" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue">من نحن</h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    نحن فريق متخصص من المهندسين والمطورين نؤمن بقوة التكنولوجيا في إحداث تغيير إيجابي. نقدم حلولاً برمجية مخصصة تلبي احتياجات عملائنا وتساعدهم على تحقيق النجاح في عالم الأعمال الرقمي.
+                </p>
+            </div>
+        </section>
+
+        <!-- قسم خدماتنا -->
+        <section id="services" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-light-blue">خدماتنا</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- خدمة 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 10H8L7.5 17H6L5.5 10H4M14.5 17V10M17.5 17V10M20.5 17V10"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">تطوير المواقع</h3>
+                        <p class="text-gray-600">نصمم ونطور مواقع إلكترونية احترافية تناسب هوية شركتك.</p>
+                    </div>
+                    <!-- خدمة 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.5a6 6 0 100-12 6 6 0 000 12z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.5V23.5M12 0.5V2.5M21.5 12H23.5M0.5 12H2.5M19.07 4.93L20.49 3.51M3.51 20.49L4.93 19.07M19.07 19.07L20.49 20.49M3.51 3.51L4.93 4.93"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">تطبيقات الجوال</h3>
+                        <p class="text-gray-600">نقوم ببناء تطبيقات جوال عالية الأداء لأنظمة iOS و Android.</p>
+                    </div>
+                    <!-- خدمة 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-6 0v-4m6 4v-4m-6-8.5v-3m6 3v-3m-6 3h6m-6 0h6"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">استشارات تقنية</h3>
+                        <p class="text-gray-600">نوفر استشارات لمساعدتك على اختيار الحلول التكنولوجية الأنسب.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم تواصل معنا -->
+        <section id="contact" class="py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue">تواصل معنا</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+                    نحن على استعداد لمناقشة مشروعك وتقديم عرض سعر مجاني.
+                </p>
+                <div class="space-y-4 max-w-md mx-auto">
+                    <input type="text" placeholder="الاسم" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-light-blue">
+                    <input type="email" placeholder="البريد الإلكتروني" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-light-blue">
+                    <textarea placeholder="رسالتك" rows="4" class="w-full p-4 border rounded-lg focus:outline-none focus:ring-2 focus:ring-light-blue"></textarea>
+                    <button class="w-full bg-dark-blue text-white font-bold py-4 rounded-lg hover:bg-blue-800 transition-colors">
+                        إرسال الرسالة
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل (Footer) -->
+    <footer class="bg-gray-800 text-white py-6 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2025 LINK. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript لإظهار قائمة الجوال -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
