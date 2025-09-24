@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>موقع LINK للخدمات التقنية</title>
+    <title>موقع LINK للحلول الطبية</title>
     <!-- تضمين مكتبة Tailwind CSS للتصميم -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -30,6 +30,18 @@
         
         .text-dark-blue {
             color: var(--dark-blue);
+        }
+
+        /* تأثيرات حركية إضافية للبطاقات */
+        .card-hover-effect:hover {
+            transform: translateY(-5px) scale(1.02);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* تأثيرات حركية على صور البورتفوليو */
+        .portfolio-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -69,59 +81,65 @@
         <!-- قسم المقدمة (Hero Section) -->
         <section id="hero" class="bg-primary-gradient text-white py-20 md:py-32 text-center">
             <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">حلول تكنولوجية مبتكرة من LINK</h1>
-                <p class="text-lg md:text-xl mb-8">نحن نقدم أفضل الحلول البرمجية التي تساهم في نمو أعمالك وتحقيق أهدافك.</p>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">حلول تكنولوجية مبتكرة للمجال الطبي</h1>
+                <p class="text-lg md:text-xl mb-8">نقدم حلول برمجية متكاملة للعيادات والمراكز الطبية لتحسين الكفاءة وتجربة المريض.</p>
                 <a href="#contact" class="bg-white text-dark-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition-colors">
                     ابدأ الآن
                 </a>
             </div>
         </section>
 
-        <!-- قسم من نحن -->
+        <!-- قسم من نحن (مُحدّث) -->
         <section id="about" class="py-16 md:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue">من نحن</h2>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    نحن فريق متخصص من المهندسين والمطورين نؤمن بقوة التكنولوجيا في إحداث تغيير إيجابي. نقدم حلولاً برمجية مخصصة تلبي احتياجات عملائنا وتساعدهم على تحقيق النجاح في عالم الأعمال الرقمي.
-                </p>
-            </div>
-        </section>
-
-        <!-- قسم خدماتنا -->
-        <section id="services" class="bg-gray-100 py-16 md:py-24">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-light-blue">خدماتنا</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- خدمة 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9.25 10H8L7.5 17H6L5.5 10H4M14.5 17V10M17.5 17V10M20.5 17V10"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold mb-2">تطوير المواقع</h3>
-                        <p class="text-gray-600">نصمم ونطور مواقع إلكترونية احترافية تناسب هوية شركتك.</p>
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue text-center">من نحن</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-12 md:space-x-reverse">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A5568/fff?text=فريق+LINK+لحلول+طبية" alt="فريق LINK للحلول الطبية" class="rounded-xl shadow-lg w-full">
                     </div>
-                    <!-- خدمة 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18.5a6 6 0 100-12 6 6 0 000 12z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21.5V23.5M12 0.5V2.5M21.5 12H23.5M0.5 12H2.5M19.07 4.93L20.49 3.51M3.51 20.49L4.93 19.07M19.07 19.07L20.49 20.49M3.51 3.51L4.93 4.93"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold mb-2">تطبيقات الجوال</h3>
-                        <p class="text-gray-600">نقوم ببناء تطبيقات جوال عالية الأداء لأنظمة iOS و Android.</p>
-                    </div>
-                    <!-- خدمة 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
-                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20v-6a2 2 0 012-2h2a2 2 0 012 2v6m-6 0h6m-6 0v-4m6 4v-4m-6-8.5v-3m6 3v-3m-6 3h6m-6 0h6"></path>
-                        </svg>
-                        <h3 class="text-xl font-bold mb-2">استشارات تقنية</h3>
-                        <p class="text-gray-600">نوفر استشارات لمساعدتك على اختيار الحلول التكنولوجية الأنسب.</p>
+                    <div class="md:w-1/2 text-center md:text-right">
+                        <p class="text-gray-600 text-lg leading-relaxed">
+                            نحن فريق من المطورين والمهندسين المتخصصين في تقديم حلول تقنية مصممة خصيصًا لتلبية احتياجات القطاع الطبي. نهدف إلى تبسيط العمليات، وتحسين رعاية المرضى، ومساعدة المؤسسات الطبية على النمو في العصر الرقمي.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- قسم أعمالنا -->
+        <!-- قسم خدماتنا (مُحدّث) -->
+        <section id="services" class="bg-gray-100 py-16 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-light-blue">خدماتنا</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- خدمة 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow card-hover-effect">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">أنظمة إدارة العيادات</h3>
+                        <p class="text-gray-600">حلول متكاملة لإدارة المواعيد، سجلات المرضى، والفواتير بكفاءة.</p>
+                    </div>
+                    <!-- خدمة 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow card-hover-effect">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">تطبيقات حجز المواعيد</h3>
+                        <p class="text-gray-600">تطبيقات جوال للمرضى تسمح لهم بحجز المواعيد بسهولة ومتابعة حالتهم.</p>
+                    </div>
+                    <!-- خدمة 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow card-hover-effect">
+                        <svg class="w-12 h-12 text-dark-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18H3.5a2.5 2.5 0 01-2.5-2.5v-7A2.5 2.5 0 013.5 6H5m0 12h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-xl font-bold mb-2">حلول التطبيب عن بعد</h3>
+                        <p class="text-gray-600">منصات آمنة للمشاورات الطبية عن بعد، مما يوفر الوصول للرعاية الصحية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم أعمالنا (مُحدّث) -->
         <section id="portfolio" class="py-16 md:py-24">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue">أعمالنا</h2>
@@ -130,27 +148,27 @@
                 </p>
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- مشروع 1 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=مشروع+1" alt="مشروع 1" class="w-full h-48 object-cover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow card-hover-effect">
+                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=نظام+إدارة+عيادة" alt="نظام إدارة عيادة" class="w-full h-48 object-cover portfolio-image">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">تطبيق جوال للتجارة الإلكترونية</h3>
-                            <p class="text-gray-600">حلول متكاملة للتسوق عبر الإنترنت وتجربة مستخدم سلسة.</p>
+                            <h3 class="text-xl font-bold mb-2">نظام"I-Care" إدارة عيادتك "المركز الطبي" </h3>
+                            <p class="text-gray-600">نظام متكامل لتسهيل العمليات الإدارية وتحسين تجربة المريض.</p>
                         </div>
                     </div>
                     <!-- مشروع 2 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=مشروع+2" alt="مشروع 2" class="w-full h-48 object-cover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow card-hover-effect">
+                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=تطبيق+حجز+مواعيد" alt="تطبيق حجز مواعيد" class="w-full h-48 object-cover portfolio-image">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">موقع إلكتروني لشركة عقارات</h3>
-                            <p class="text-gray-600">منصة لعرض العقارات مع إمكانية البحث المتقدم.</p>
+                            <h3 class="text-xl font-bold mb-2"> "I-Care"تطبيق</h3>
+                            <p class="text-gray-600">تطبيق لأداره العيادات الطبيه .</p>
                         </div>
                     </div>
                     <!-- مشروع 3 -->
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=مشروع+3" alt="مشروع 3" class="w-full h-48 object-cover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow card-hover-effect">
+                        <img src="https://placehold.co/400x250/E2E8F0/4A5568/fff?text=منصة+تطبيب+عن+بعد" alt="منصة تطبيب عن بعد" class="w-full h-48 object-cover portfolio-image">
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2">نظام إدارة المحتوى مخصص</h3>
-                            <p class="text-gray-600">لوحة تحكم سهلة الاستخدام لإدارة محتوى المواقع.</p>
+                            <h3 class="text-xl font-bold mb-2">منصة "صحة عن بعد" للتطبيب</h3>
+                            <p class="text-gray-600">منصة آمنة وسهلة الاستخدام للمشاورات الطبية عبر الفيديو.</p>
                         </div>
                     </div>
                 </div>
@@ -162,28 +180,28 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-light-blue">تواصل معنا</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto mb-12">
-                    يمكنك التواصل معنا عبر الطرق التالية:
+                    يمكنك التواصل معنا عبر الطرق التالية أو إرسال رسالتك مباشرة من خلال النموذج.
                 </p>
                 <!-- تصميم ديناميكي باستخدام بطاقات متجاوبة -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     <!-- بطاقة البريد الإلكتروني الأول -->
-                    <a href="mailto:hello@link-ats.com" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center">
+                    <a href="mailto:hello@link-ats.com" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center card-hover-effect">
                         <div class="w-16 h-16 rounded-full bg-light-blue text-white flex items-center justify-center mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h3 class="text-lg font-bold mb-1">البريد الإلكتروني</h3>
+                        <h3 class="text-lg font-bold mb-1"بريد الإلكتروني</h3>
                         <p class="text-gray-600 hover:underline">hello@link-ats.com</p>
                     </a>
                     <!-- بطاقة البريد الإلكتروني الثاني -->
-                    <a href="mailto:link.link.ats@gmail.com" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center">
+                    <a href="mailto:link.link.ats@gmail.com" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center card-hover-effect">
                         <div class="w-16 h-16 rounded-full bg-light-blue text-white flex items-center justify-center mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                         </div>
-                        <h3 class="text-lg font-bold mb-1">بريد إلكتروني بديل</h3>
+                        <h3 class="text-lg font-bold mb-1">بريد إلكتروني </h3>
                         <p class="text-gray-600 hover:underline">link.link.ats@gmail.com</p>
                     </a>
                     <!-- بطاقة رقم الهاتف -->
-                    <a href="tel:000000000" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center">
+                    <a href="tel:000000000" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center card-hover-effect">
                         <div class="w-16 h-16 rounded-full bg-light-blue text-white flex items-center justify-center mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.995.832L9.45 7.641a1 1 0 01-.19.957l-1.206 1.206a12.001 12.001 0 006.945 6.945l1.206-1.206a1 1 0 01.957-.19l2.81-1.17a1 1 0 01.832.995V19a2 2 0 01-2 2h-1c-8.837 0-16-7.163-16-16v-1z"></path></svg>
                         </div>
@@ -191,13 +209,36 @@
                         <p class="text-gray-600 hover:underline">000000000</p>
                     </a>
                     <!-- بطاقة العنوان -->
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center justify-center text-center card-hover-effect">
                         <div class="w-16 h-16 rounded-full bg-light-blue text-white flex items-center justify-center mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
                         <h3 class="text-lg font-bold mb-1">العنوان</h3>
                         <p class="text-gray-600">7-عبدالحميد لطفي - المهندسين - الجيزة</p>
                     </div>
+                </div>
+
+                <!-- نموذج الاتصال -->
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                    <form id="contact-form">
+                        <div class="mb-4">
+                            <label for="name" class="block text-right text-gray-700 font-bold mb-2">الاسم:</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dark-blue" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-right text-gray-700 font-bold mb-2">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dark-blue" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-right text-gray-700 font-bold mb-2">الرسالة:</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-dark-blue" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-dark-blue text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-light-blue transition-colors">
+                                إرسال الرسالة
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
@@ -210,15 +251,35 @@
         </div>
     </footer>
 
-    <!-- JavaScript لإظهار قائمة الجوال -->
+    <!-- JavaScript لإظهار قائمة الجوال وتأثيرات الصفحة -->
     <script>
+        // إظهار وإخفاء قائمة الجوال
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-    </script>
 
+        // التعامل مع نموذج الاتصال (الجزء الأمامي فقط)
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // هنا يمكنك إضافة كود إرسال النموذج إلى الخادم
+            console.log("النموذج جاهز للإرسال.");
+            alert('تم إرسال رسالتك بنجاح! شكراً لك.'); // استخدام رسالة بسيطة للتوضيح
+            contactForm.reset();
+        });
+
+        // تأثير smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
